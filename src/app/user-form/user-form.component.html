@@ -1,0 +1,159 @@
+<!-- ExampleComponent.component.html -->
+<div class="flex flex-col items-center justify-center bg-gray-100">
+    <h2 class="text-2xl font-bold mb-4 mt-4">Header Guy</h2>
+  
+    <div class="mb-4">
+      <h2 class="text-xl font-bold">Selection Guy</h2>
+    </div>
+  
+    <div class="bg-white p-6 rounded-lg shadow-md w-6/12">
+      <label for="" class="italic mb-2">Enter your Optimus Bank Account Number (This is Optional. However, you can download the app "OptiVerse" to open your account as a parent)</label>
+      <input type="text" class="border rounded-md py-2 px-4 mb-4 w-full">
+  
+      <form (ngSubmit)="onSubmit()" class="flex flex-col space-y-4">
+
+        <div class="flex space-x-4 w-full">
+            <div class="flex flex-col w-6/12">
+                <label for="firstName" class="font-medium">Child's First Name:</label>
+                <input type="text" id="firstName" formControlName="firstName" class="border rounded-md py-2 px-4" required>
+            </div>
+            
+            <div class="flex flex-col w-6/12">
+                <label for="lastName" class="font-medium">Child's Last Name:</label>
+                <input type="text" id="lastName" formControlName="lastName" class="border rounded-md py-2 px-4" required>
+            </div>
+        </div>
+
+        <div class="flex space-x-4 w-full">
+            <div class="flex flex-col w-6/12">
+                <label for="firstName" class="font-medium">Child's Middle Name:</label>
+                <input type="text" id="middleName" formControlName="middleName" class="border rounded-md py-2 px-4" required>
+            </div>
+            
+            <div class="flex flex-col w-6/12">
+                <label for="lastName" class="font-medium">Child's Other Name:</label>
+                <input type="text" id="otherName" formControlName="otherName" class="border rounded-md py-2 px-4" required>
+            </div>
+        </div>
+    
+        <label for="lastName" class="font-medium">Mother's Maiden Name:</label>
+        <input type="text" id="mothersname" formControlName="mothersname" class="border rounded-md py-2 px-4">
+
+        <label for="dateOfBirth" class="font-medium">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" formControlName="dateOfBirth" class="border rounded-md py-2 px-4" required>
+
+        <label for="gender" class="font-medium">Gender</label>
+        <div class="flex">
+            <input type="radio" name="male" id="">
+            <label for="male" class="ml-2">Male</label>
+        </div>
+
+        <div class="flex">
+            <input type="radio" name="female" id="">
+            <label for="female" class="ml-2">Female</label>
+        </div>
+
+        <label for="stateoforigin" class="font-medium">State of Origin:</label>
+        <select name="states" id="" class="border rounded-md py-2 px-4">
+            <option value="select"> -Select- </option>
+            <option value="select"> Abia </option>
+            <option value="select"> Aba </option>
+            <option value="select"> Edo </option>
+            <option value="select"> Lagos </option>
+            <option value="select"> Ogun </option>
+            <option value="select"> Yobe </option>
+            <option value="select"> FCT </option>
+        </select>
+
+        <label for="local" class="font-medium">House Number</label>
+        <input type="string" class="border rounded-md py-2 px-4">
+
+        <h2 class="font-bold">Address</h2>
+        <div class="flex space-x-4 w-full">
+            <div class="flex flex-col w-6/12">
+                <label for="firstName" class="font-medium">House Number:</label>
+                <input type="text" id="housenumber" formControlName="housenumber" class="border rounded-md py-2 px-4" required>
+            </div>
+            
+            <div class="flex flex-col w-6/12">
+                <label for="lastName" class="font-medium">Street Name:</label>
+                <input type="text" id="streetname" formControlName="streetname" class="border rounded-md py-2 px-4" required>
+            </div>
+        </div>
+
+        <div class="flex space-x-4 w-full">
+            <div class="flex flex-col w-6/12">
+                <label for="firstName" class="font-medium">City:</label>
+                <input type="text" id="city" formControlName="city" class="border rounded-md py-2 px-4" required>
+            </div>
+            
+            <div class="flex flex-col w-6/12">
+                <label for="lastName" class="font-medium">State:</label>
+                <input type="text" id="state" formControlName="state" class="border rounded-md py-2 px-4" required>
+            </div>
+        </div>
+
+        <label for="stateoforigin" class="font-medium">Country:</label>
+        <select name="states" id="" class="border rounded-md py-2 px-4">
+            <option value="select"> -Select- </option>
+            <option value="select"> Nigeria </option>
+            <option value="select"> USA </option>
+            <option value="select"> UK </option>
+            <option value="select"> Russia </option>
+            <option value="select"> Germany </option>
+        </select>
+
+        <label for="gender" class="font-bold">Standing Instruction Frequency for Direct Debit</label>
+        <div class="flex">
+            <input type="radio" name="daily" id="">
+            <label for="daily" class="ml-2">Daily</label>
+        </div>
+        <div class="flex">
+            <input type="radio" name="weekly" id="">
+            <label for="weekly" class="ml-2">Weekly</label>
+        </div>
+        <div class="flex">
+            <input type="radio" name="monthly" id="">
+            <label for="monthly" class="ml-2">Monthly</label>
+        </div>
+        <div class="flex">
+            <input type="radio" name="quarterly" id="">
+            <label for="quarterly" class="ml-2">Quaterly</label>
+        </div>
+        <div class="flex">
+            <input type="radio" name="bi-annually" id="">
+            <label for="bi-annually" class="ml-2">Bi-Annually</label>
+        </div>
+        <div class="flex">
+            <input type="radio" name="yearly" id="">
+            <label for="yearly" class="ml-2">Yearly</label>
+        </div>
+
+        <label for="local" class="font-medium">Standing Instruction Value Amount (Minimum of NGN1,000)</label>
+        <input type="amount" class="border rounded-md py-2 px-4">
+
+        <label for="" class="font-medium">Upload ID of Additional Signatory (National ID/Int'l Passport/Drivers' License/PVC)</label>
+        <input type="file" accept=".pdf, .doc, .docx" class="border rounded-md py-2 px-4">
+
+        <label for="" class="font-medium">Upload Passport Photo of Additional Signatory</label>
+        <input type="file" accept=".png, .jpg, .jpeg" class="border rounded-md py-2 px-4">
+
+        <label for="" class="font-medium">Upload Signature of Additional Signatory</label>
+        <input type="file" accept=".pdf, .doc, .docx" class="border rounded-md py-2 px-4">
+
+        <label for="" class="font-medium">Upload Child's Birth Certificate </label>
+        <input type="file" accept=".pdf, .doc, .docx" class="border rounded-md py-2 px-4">
+
+        <label for="" class="font-medium">Upload Child's passport photo </label>
+        <input type="file" accept=".png, .jpg, .jpeg" class="border rounded-md py-2 px-4">
+
+        <label for="" class="font-medium">Upload recent utility bill/proof of address</label>
+        <input type="file" accept=".pdf, .doc, .docx, .png, .jpg" class="border rounded-md py-2 px-4">
+
+        
+  
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md">Submit</button>
+      </form>
+    </div>
+  </div>
+  

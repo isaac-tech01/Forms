@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-angular-app';
+  onFormSubmit(formData: any) {
+    // Process the form data here, e.g., send it to the server or display it
+    console.log(formData);
+  }
 }
